@@ -15,6 +15,7 @@ const ArticlePage = ({ match }) => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetch(`/api/articles/${name}`);
+      console.log(result);
       const body = await result.json();
       console.log(articleInfo);
       setArticleInfo(body);
