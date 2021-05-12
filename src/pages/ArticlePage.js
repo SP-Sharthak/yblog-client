@@ -17,9 +17,7 @@ const ArticlePage = ({ match }) => {
       const result = await fetch(
         `https://yblog.herokuapp.com/api/articles/${name}`
       );
-      console.log(result);
       const body = await result.json();
-      console.log(articleInfo);
       setArticleInfo(body);
     };
     fetchData();
