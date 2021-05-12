@@ -14,9 +14,7 @@ const ArticlePage = ({ match }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetch(
-        `https://yblog.herokuapp.com/api/articles/${name}`
-      );
+      const result = await fetch(`/api/articles/${name}`);
       const body = await result.json();
       console.log(articleInfo);
       setArticleInfo(body);
